@@ -13,8 +13,16 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "svelte3"
     ],
+    "overrides": [
+        {
+          "files": ["*.svelte"],
+          "processor": "svelte3/svelte3"
+        }
+      ],
     "rules": {
+        "quotes": ["error", "single"]
     }
 }
