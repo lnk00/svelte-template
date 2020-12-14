@@ -16,6 +16,7 @@
     }
   },
   "jest": {
+    "verbose": true,
     "transform": {
       "^.+\\.svelte$": [
         "svelte-jester",
