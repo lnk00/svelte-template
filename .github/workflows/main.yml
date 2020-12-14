@@ -9,16 +9,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  complete-ci:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Deps
-        run: yarn build
+        run: yarn install
       - name: Build Application
         run: yarn build
 
-  code-analysis:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
       - name: lint
         run: yarn lint
 
-  code-testing:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
